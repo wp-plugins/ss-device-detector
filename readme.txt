@@ -3,8 +3,8 @@ Contributors: vladiiancu, peterbuga
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vladi%2eiancu%40gmail%2ecom&lc=RO&item_name=WordPress%20Plugin&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: responsive, shortcode, content, adaptive, RESS
 Requires at least: 3.2
-Tested up to: 3.9
-Stable tag: 1.0.2
+Tested up to: 4.0
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A plugin that detects the device used by visitors and provides functions and sho
 
 == Description ==
 
-The purpose of the plugin is to help both WordPress users and developers with shortcodes and function respectevly, to implement a server side responsive solution for their theme. 
+The purpose of the plugin is to help both WordPress users and developers with shortcodes and function respectively, to implement a server side responsive solution for their theme. 
 The difference is substantial compared to solutions like ` display:none `. When using the "display" CSS instruction on, let's say, an image, the browser actually downloads the entire image and then it hides it. With this solution the image is no longer downloaded. 
 SS comes from 'server-side'.
 
@@ -39,6 +39,10 @@ You can use:
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Tested for WordPress 4.0.
+* Updated to remove some PHP (5.4) notices and warnings
 
 = 1.0.2 = 
 * Rewritten to add support for PHP 5.2+

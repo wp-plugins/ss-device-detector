@@ -1,7 +1,7 @@
 <?php 
 	/*
 	Plugin Name: SS Device Detector
-	Version: 1.0.2
+	Version: 1.0.3
 	Plugin URI: http://www.siteup.org.uk/downloads/ss-device-detector-wp-plugin/
 	Description: Server-side solution to detect mobile, tablet and desktop devices. Creates functions and shortcodes
 	Author: SiteUP&trade;
@@ -36,7 +36,7 @@ class SS_DeviceDetector{
 		
     }
 
-    function wp_mobcodes_admin_notices() {
+    static function wp_mobcodes_admin_notices() {
 	  	delete_option('wp_mobcodes_activate');
 
 	  	if ($notices= get_option('wp_mobcodes_deferred_admin_notices')) {
@@ -47,7 +47,7 @@ class SS_DeviceDetector{
 	  	}
 	}
 
-    function wp_mobcodes_activation() {
+    static function wp_mobcodes_activation() {
     	$notices = get_option('wp_mobcodes_deferred_admin_notices', array());
     	
     	if (class_exists('Mobile_Detect') )
@@ -57,7 +57,7 @@ class SS_DeviceDetector{
 	 	update_option('wp_mobcodes_deferred_admin_notices', $notices);
 	}
 
-	function wp_mobcodes_admin_init() {
+	static function wp_mobcodes_admin_init() {
 
 		if (class_exists('Mobile_Detect') && is_plugin_active( plugin_basename( __FILE__ ))) { 
 			deactivate_plugins( plugin_basename( __FILE__ ));
@@ -76,7 +76,7 @@ class SS_DeviceDetector{
 	}
 
     function wp_mobcodes_deactivation() {
-    	#no deavtivation options
+    	#no deactivation options
     }
 }
 
